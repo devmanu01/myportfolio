@@ -25,19 +25,19 @@ const projects = [
 
 export const ProjectsSection = ({ id = "projects" }: { id?: string }) => {
     return (
-        <section id={id} className="py-24 bg-foreground/[0.02]">
-            <div className="container mx-auto px-6">
+        <section id={id} className="py-16 sm:py-20 md:py-24 bg-foreground/[0.02]">
+            <div className="container mx-auto px-4 sm:px-6">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="mb-16"
+                    className="mb-10 sm:mb-16"
                 >
                     <h2 className="text-sm font-bold tracking-[0.2em] text-accent uppercase mb-2">Portfolio</h2>
-                    <h1 className="text-4xl font-bold md:text-5xl">Selected Works</h1>
+                    <h1 className="text-2xl font-bold sm:text-3xl md:text-4xl lg:text-5xl">Selected Works</h1>
                 </motion.div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
                     {projects.map((project, index) => (
                         <motion.div
                             key={project.title}
@@ -61,9 +61,9 @@ export const ProjectsSection = ({ id = "projects" }: { id?: string }) => {
                                     </a>
                                 </div>
                             </div>
-                            <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
+                            <h3 className="text-xl font-bold mb-2 sm:text-2xl">{project.title}</h3>
                             <p className="text-foreground/60 mb-4 line-clamp-2 md:line-clamp-none">{project.description}</p>
-                            <div className="flex gap-2">
+                            <div className="flex flex-wrap gap-2">
                                 {project.tags.map(tag => (
                                     <span key={tag} className="text-xs font-mono text-accent">#{tag}</span>
                                 ))}

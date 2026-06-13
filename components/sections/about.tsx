@@ -22,8 +22,8 @@ export const AboutSection = ({
   className,
 }: AboutSectionProps) => {
   return (
-    <section id={id} className={cn("py-24 md:py-32 bg-background", className)}>
-      <div className="container mx-auto px-6">
+    <section id={id} className={cn("py-16 sm:py-20 md:py-24 lg:py-32 bg-background", className)}>
+      <div className="container mx-auto px-4 sm:px-6">
         <div className="grid items-center gap-12 lg:grid-cols-2">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -35,10 +35,10 @@ export const AboutSection = ({
             <h2 className="text-sm font-bold tracking-[0.2em] text-accent uppercase mb-4">
               About Me
             </h2>
-            <h1 className="mb-6 text-4xl font-bold tracking-tight text-foreground md:text-5xl lg:text-6xl">
+            <h1 className="mb-6 text-2xl font-bold tracking-tight text-foreground sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
               {title}
             </h1>
-            <p className="mb-8 max-w-xl text-lg leading-relaxed text-foreground/70">
+            <p className="mb-8 max-w-xl text-base leading-relaxed text-foreground/70 sm:text-lg">
               {description}
             </p>
             <div className="h-1 w-20 bg-accent rounded-full" />

@@ -41,8 +41,9 @@ export default function Home() {
 
       <AboutSection
         title="Passionate about building modern web experiences."
-        description="I am a software developer with a deep focus on creating high-performance, accessible, and visually stunning applications. With expertise in Next.js, TypeScript, and modern UI/UX principles, I bridge the gap between complex backend logic and intuitive frontend design."
-        imageSrc="https://shadcnblocks.com/images/block/placeholder-1.svg"
+        description="I'm a Full-Stack Developer with a strong foundation in Data Structures & Algorithms, building scalable applications using React, Next.js, Node.js, Express, PostgreSQL, MongoDB, and Supabase. I enjoy owning products end-to-end, from system design and database architecture to deployment and optimization. I've improved API response times by 65% and reduced slow database queries by 70% on a production SaaS platform through backend and database optimization. Beyond coding, I've led engineering teams, driven architecture decisions, and achieved Top-5 finishes in multiple national hackathons. I thrive on solving complex problems and building fast, reliable, and scalable software.
+"
+        imageSrc="/aboutme.png"
         imageAlt="Working on code"
       />
 

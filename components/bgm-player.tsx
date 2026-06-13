@@ -43,7 +43,7 @@ export default function BgmPlayer() {
     <button
       onClick={togglePlay}
       className={cn(
-        "fixed bottom-6 right-6 z-50 flex h-10 items-center justify-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 text-sm text-white shadow-lg backdrop-blur-md transition-all duration-300 hover:scale-105 hover:bg-white/20 focus:outline-none active:scale-95",
+        "fixed bottom-4 right-4 z-50 flex h-9 items-center justify-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 text-xs text-white shadow-lg backdrop-blur-md transition-all duration-300 hover:scale-105 hover:bg-white/20 focus:outline-none active:scale-95 sm:bottom-6 sm:right-6 sm:h-10 sm:px-4 sm:text-sm",
         isPlaying ? "shadow-[0_0_15px_rgba(255,255,255,0.1)]" : ""
       )}
       aria-label="Toggle background music"

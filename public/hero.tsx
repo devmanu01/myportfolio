@@ -103,7 +103,7 @@ export function MinimalistHero({
     <div
       id="hero"
       className={cn(
-        "relative flex min-h-screen w-full flex-col items-center justify-between overflow-hidden bg-[#000000] px-4 py-6 sm:px-6 sm:py-8 md:px-10 md:py-10 lg:px-16 lg:py-12",
+        "relative flex min-h-screen w-full flex-col items-center justify-between overflow-hidden bg-[#000000] px-4 py-8 sm:px-6 md:px-10 md:py-12 lg:px-16",
         className
       )}
     >
@@ -119,7 +119,7 @@ export function MinimalistHero({
         </motion.div>
 
         {/* Desktop Nav */}
-        <nav className="hidden items-center space-x-8 lg:flex">
+        <nav className="hidden items-center space-x-8 md:flex">
           {navLinks.map((link) => (
             <NavLink key={link.label} href={link.href}>
               {link.label}
@@ -129,7 +129,7 @@ export function MinimalistHero({
 
         {/* Mobile Nav Toggle */}
         <button
-          className="block z-50 p-2 lg:hidden text-white hover:text-white/80 transition-colors"
+          className="block z-50 p-2 md:hidden text-white hover:text-white/80 transition-colors"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle menu"
         >
@@ -144,7 +144,7 @@ export function MinimalistHero({
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="fixed inset-0 z-40 flex flex-col items-center justify-center space-y-8 bg-black/95 backdrop-blur-md lg:hidden"
+            className="fixed inset-0 z-40 flex flex-col items-center justify-center space-y-8 bg-black/95 backdrop-blur-md md:hidden"
           >
             {navLinks.map((link) => (
               <NavLink
@@ -160,15 +160,15 @@ export function MinimalistHero({
       </AnimatePresence>
 
       {/* MAIN CONTENT */}
-      <div className="relative grid w-full max-w-7xl grow grid-cols-1 items-center gap-8 py-6 sm:gap-10 sm:py-10 md:py-12 lg:grid-cols-3 lg:gap-12 lg:py-16">
+      <div className="relative grid w-full max-w-7xl grow grid-cols-1 items-center gap-12 py-10 sm:py-16 md:grid-cols-3 md:gap-8 lg:gap-12">
         {/* LEFT TEXT */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="z-20 order-3 flex flex-col items-center lg:order-1 lg:items-start"
+          className="z-20 order-3 flex flex-col items-center md:order-1 md:items-start"
         >
-          <p className="max-w-sm text-center text-sm leading-relaxed text-white/80 sm:text-base lg:text-left lg:text-lg">
+          <p className="max-w-sm text-center text-base leading-relaxed text-white/80 md:text-left lg:text-lg">
             {mainText}
           </p>
           <a
@@ -186,29 +186,29 @@ export function MinimalistHero({
         </motion.div>
 
         {/* CENTER IMAGE */}
-        <div className="relative order-1 flex w-full items-center justify-center py-2 sm:py-6 lg:order-2 lg:py-0">
-          <div className="relative flex items-center justify-center overflow-hidden max-h-[380px] sm:max-h-[420px] md:max-h-[460px] lg:max-h-none mx-auto">
+        <div className="relative order-1 flex w-full items-center justify-center py-6 sm:py-10 md:order-2 md:py-0">
+          <div className="relative flex items-center justify-center">
             {/* Accent glows */}
             <motion.div
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.8 }}
-              className="absolute z-0 h-44 w-44 rounded-full bg-accent/20 blur-[60px] sm:h-56 sm:w-56 md:h-64 md:w-64 md:blur-[80px] lg:h-80 lg:w-80 xl:h-96 xl:w-96 lg:blur-[120px]"
+              className="absolute z-0 h-48 w-48 rounded-full bg-accent/20 blur-[80px] sm:h-64 sm:w-64 md:h-80 md:w-80 lg:h-96 lg:w-96 md:blur-[120px]"
             />
             <motion.div
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 0.8 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="absolute z-0 h-36 w-36 rounded-full bg-accent sm:h-48 sm:w-48 md:h-56 md:w-56 lg:h-72 lg:w-72 xl:h-80 xl:w-80 opacity-60"
+              className="absolute z-0 h-40 w-40 rounded-full bg-accent sm:h-56 sm:w-56 md:h-72 md:w-72 lg:h-80 lg:w-80 opacity-60"
             />
 
             {/* Portrait image */}
             <motion.img
               src={imageSrc}
               alt={imageAlt}
-              className="relative z-10 w-48 object-cover block mx-auto sm:w-52 md:w-56 lg:w-56 lg:scale-125 xl:w-64 drop-shadow-2xl"
+              className="relative z-10 w-48 scale-125 object-cover md:w-56 lg:w-64 drop-shadow-2xl"
               initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
+              animate={{ opacity: 1, scale: 1.25 }}
               transition={{ duration: 1 }}
             />
           </div>
@@ -219,9 +219,9 @@ export function MinimalistHero({
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="z-20 order-2 flex w-full items-center justify-center lg:order-3 lg:justify-start"
+          className="z-20 order-2 flex w-full items-center justify-center md:order-3 md:justify-start"
         >
-          <div className="relative flex h-[50px] w-full max-w-[90vw] items-center justify-center overflow-hidden sm:h-[70px] md:h-[90px] lg:h-[140px] lg:justify-start xl:h-[180px]">
+          <div className="relative flex h-[80px] w-full max-w-[90vw] items-center justify-center overflow-hidden sm:h-[100px] md:h-[140px] md:justify-start lg:h-[180px]">
             <TextPressure
               text="Software Engineer"
               flex={true}
@@ -239,7 +239,7 @@ export function MinimalistHero({
       </div>
 
       {/* FOOTER */}
-      <footer className="z-30 mt-auto flex w-full max-w-7xl flex-col items-center justify-between gap-4 sm:gap-6 lg:flex-row lg:gap-0 pt-4 sm:pt-8 pb-4">
+      <footer className="z-30 mt-auto flex w-full max-w-7xl flex-col items-center justify-between gap-6 md:flex-row md:gap-0 pt-8 pb-4">
         <div className="flex items-center space-x-6 sm:space-x-8">
           {socialLinks.map((link, i) => (
             <SocialIcon key={i} href={link.href} icon={link.icon} />
