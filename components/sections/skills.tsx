@@ -84,7 +84,7 @@ export const SkillsSection = ({ id = "skills" }: { id?: string }) => {
                 ''
               }`}
             >
-              <h3 className="text-xs sm:text-sm font-bold tracking-widest text-white/40 uppercase mb-6 sm:mb-8">
+              <h3 className="text-xs sm:text-sm font-bold tracking-widest text-white/70 uppercase mb-6 sm:mb-8">
                 {category.title}
               </h3>
               <div className="flex flex-wrap gap-3 sm:gap-4">
@@ -95,10 +95,10 @@ export const SkillsSection = ({ id = "skills" }: { id?: string }) => {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.05 }}
-                    className="flex items-center gap-2 px-3 py-2 sm:px-4 sm:py-2.5 rounded-xl border border-white/10 bg-black/40 hover:bg-white/10 hover:border-white/20 transition-all duration-300 cursor-default group"
+                    className="flex items-center gap-2 px-3 py-2 sm:px-4 sm:py-2.5 rounded-xl border border-white/20 bg-white/5 hover:bg-white/10 hover:border-white/30 transition-all duration-300 cursor-default group shadow-sm"
                   >
-                    <item.icon className={`w-4 h-4 sm:w-5 sm:h-5 ${item.color} group-hover:scale-110 transition-transform`} />
-                    <span className="text-xs sm:text-sm font-medium text-white/90">{item.name}</span>
+                    <item.icon className={`w-5 h-5 sm:w-5 sm:h-5 ${item.color} group-hover:scale-110 transition-transform`} />
+                    <span className="text-xs sm:text-sm font-medium text-white">{item.name}</span>
                   </motion.div>
                 ))}
               </div>
