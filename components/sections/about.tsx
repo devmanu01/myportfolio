@@ -52,10 +52,11 @@ export const AboutSection = ({
             className="relative"
           >
             <div className="absolute -inset-4 bg-accent/5 rounded-2xl -z-10 blur-2xl" />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={imageSrc}
               alt={imageAlt}
-              className="w-full rounded-2xl object-cover shadow-2xl grayscale hover:grayscale-0 transition-all duration-700"
+              className="w-full rounded-2xl object-cover shadow-2xl transition-all duration-700"
             />
           </motion.div>
         </div>

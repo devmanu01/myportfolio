@@ -320,7 +320,7 @@ export default function VaporizeText({
     resizeObserver.observe(container);
     return () => resizeObserver.disconnect();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [wrapperRef.current]);
+  }, []);
 
   // ── Initial size detection ─────────────────────────────────
   useEffect(() => {
@@ -456,6 +456,7 @@ const renderCanvas = ({
   wrapperSize,
   particlesRef,
   globalDpr,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   transformedDensity,
 }: {
   text: string;

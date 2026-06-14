@@ -44,7 +44,8 @@ export default function SkillsMarquee() {
                 <div className="flex animate-marquee gap-6 sm:gap-10 group-hover:[animation-play-state:paused]">
                     {row1.map((skill, i) => (
                         <div key={i} className="min-w-[40px] sm:min-w-[60px]">
-                            <img
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
                                 src={`https://skillicons.dev/icons?i=${skill}&theme=dark`}
                                 alt={skill}
                                 width={50}
@@ -62,7 +63,8 @@ export default function SkillsMarquee() {
                 <div className="flex animate-marquee-reverse gap-6 sm:gap-10 group-hover:[animation-play-state:paused]">
                     {row2Full.map((skill, i) => (
                         <div key={i} className="min-w-[40px] sm:min-w-[60px]">
-                            <img
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
                                 src={`https://skillicons.dev/icons?i=${skill}&theme=dark`}
                                 alt={skill}
                                 width={50}

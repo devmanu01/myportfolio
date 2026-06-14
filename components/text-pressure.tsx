@@ -29,8 +29,10 @@ const getAttr = (distance: number, maxDist: number, minVal: number, maxVal: numb
   return Math.max(minVal, val + minVal);
 };
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const debounce = (func: (...args: any[]) => void, delay: number) => {
   let timeoutId: ReturnType<typeof setTimeout>;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   return (...args: any[]) => {
     clearTimeout(timeoutId);
     timeoutId = setTimeout(() => {
@@ -205,6 +207,7 @@ const TextPressure: React.FC<TextPressureProps> = ({
         }
       `}</style>
     );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [fontFamily, fontUrl, flex, stroke, textColor, strokeColor]);
 
   const dynamicClassName = [className, flex ? 'flex' : '', stroke ? 'stroke' : ''].filter(Boolean).join(' ');

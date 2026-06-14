@@ -4,8 +4,10 @@ import { MinimalistHero } from "@/components/hero";
 import { AboutSection } from "@/components/sections/about";
 import { SkillsSection } from "@/components/sections/skills";
 import { ProjectsSection } from "@/components/sections/projects";
-import { ContactSection } from "@/components/sections/contact";
 import SkillsMarquee from "@/components/skills-marquee";
+import { Footer } from "@/components/ui/modem-animated-footer";
+import { Mail } from "lucide-react";
+import { FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa";
 
 export default function Home() {
   const navLinks = [
@@ -15,12 +17,12 @@ export default function Home() {
     { label: "CONTACT", href: "#contact" },
   ];
 
-  const socialLinks = [
+  const socialLinks: { icon: "mail" | "instagram" | "twitter" | "linkedin"; href: string }[] = [
     { icon: "mail", href: "mailto:chauhanmanucr7@gmail.com" },
     { icon: "instagram", href: "https://www.instagram.com/chauhanmanu01/" },
     { icon: "twitter", href: "#" },
     { icon: "linkedin", href: "https://www.linkedin.com/in/manu-chauhan-2704142a7/" },
-  ] as const;
+  ];
 
   return (
     <main className="min-h-screen">
@@ -31,11 +33,7 @@ export default function Home() {
         readMoreLink="#about"
         imageSrc="/hero-portrait.png.png"
         imageAlt="Portrait of Manu Chauhan"
-        overlayText={{
-          part1: "SOFTWARE",
-          part2: "DEVELOPER",
-        }}
-        socialLinks={socialLinks as any}
+        socialLinks={socialLinks}
         locationText="Meerut, India"
       />
 
@@ -53,8 +51,37 @@ export default function Home() {
 
       <ProjectsSection />
 
-      <ContactSection />
+      <Footer
+        brandName="MANU CHAUHAN"
+        brandDescription="Full-Stack Developer building scalable applications and engineering impact. Turning ideas into realities."
+        socialLinks={[
+          {
+            icon: <FaTwitter className="w-6 h-6" />,
+            href: "#",
+            label: "Twitter",
+          },
+          {
+            icon: <FaLinkedin className="w-6 h-6" />,
+            href: "https://www.linkedin.com/in/manu-chauhan-2704142a7/",
+            label: "LinkedIn",
+          },
+          {
+            icon: <FaGithub className="w-6 h-6" />,
+            href: "https://github.com/devmanu01",
+            label: "GitHub",
+          },
+          {
+            icon: <Mail className="w-6 h-6" />,
+            href: "mailto:chauhanmanucr7@gmail.com",
+            label: "Email",
+          },
+        ]}
+        navLinks={navLinks}
+        largeText="dev.manu"
+        creatorName="dev.manu"
+        creatorUrl="https://github.com/devmanu01"
+
+      />
     </main>
   );
 }
-

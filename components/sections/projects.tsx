@@ -9,7 +9,7 @@ const projects = [
     {
         title: "EcoVision",
         description: "EcoVision is a full-stack web application that combines environmental data visualization, AI-powered insights, and predictive analytics to monitor and understand global climate and ecological changes. It provides users with dynamic visualizations, data-driven predictions, interactive geographical maps, and deep AI-powered insights concerning environmental trends and actionable solutions.",
-        image: "https://ecovision-one.vercel.app/dashboard",
+        image: "/ecovision.png", // <--- Place your image in the 'public' folder named 'ecovision.png'
         tags: ["Next.js","Google Gemini AI integration","Leaflet.js","Typescript","Google Auth"],
         link: "https://ecovision-one.vercel.app/dashboard",
         github: "https://github.com/devmanu01/ecovision"
@@ -17,7 +17,7 @@ const projects = [
     {
         title: "TripVerse",
         description: "TripVerse is a modern, AI-powered travel companion designed to revolutionize how you plan and experience your journeys. From generating personalized trip itineraries to seeking immediate travel advice via an integrated chatbot, TripVerse provides an all-in-one platform for your globetrotting needs.",
-        image: "https://trip-verse.netlify.app/",
+        image: "/tripverse.png", // <--- Place your image in the 'public' folder named 'tripverse.png'
         tags: ["Next.js","MySql","Prisma","Express.js","Typescript","Google Gemini AI integration"],
         link: "https://trip-verse.netlify.app/",
         github: "https://github.com/i-ankit01/TripVerse"
@@ -48,6 +48,7 @@ export const ProjectsSection = ({ id = "projects" }: { id?: string }) => {
                             className="flex flex-col group"
                         >
                             <div className="relative overflow-hidden rounded-2xl bg-black mb-6 aspect-video">
+                                {/* eslint-disable-next-line @next/next/no-img-element */}
                                 <img
                                     src={project.image}
                                     alt={project.title}

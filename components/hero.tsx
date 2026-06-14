@@ -25,10 +25,6 @@ interface MinimalistHeroProps {
   readMoreLink: string;
   imageSrc: string;
   imageAlt: string;
-  overlayText: {
-    part1: string;
-    part2: string;
-  };
   socialLinks: {
     icon: keyof typeof socialIconMap;
     href: string;
@@ -90,7 +86,6 @@ export function MinimalistHero({
   readMoreLink,
   imageSrc,
   imageAlt,
-  overlayText,
   socialLinks,
   locationText,
   className,

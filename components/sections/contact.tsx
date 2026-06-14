@@ -1,8 +1,7 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
-import { MapPin, Mail, Phone, ArrowUpRight } from "lucide-react";
+import { MapPin, Mail, ArrowUpRight } from "lucide-react";
 
 export const ContactSection = ({ id = "contact" }: { id?: string }) => {
     return (
@@ -49,9 +48,6 @@ export const ContactSection = ({ id = "contact" }: { id?: string }) => {
                     </div>
                 </div>
 
-                <footer className="mt-16 text-center text-foreground/40 text-sm font-bold tracking-widest uppercase">
-                    © {new Date().getFullYear()} MANU CHAUHAN • ALL RIGHTS RESERVED
-                </footer>
             </div>
         </section>
     );
