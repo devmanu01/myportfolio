@@ -207,12 +207,12 @@ export function MinimalistHero({
           </div>
         </div>
 
-        {/* RIGHT TEXT */}
+        {/* RIGHT TEXT & STATS */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="z-20 order-2 flex w-full items-center justify-center lg:order-3 lg:justify-start"
+          className="z-20 order-2 flex flex-col w-full items-center justify-center lg:order-3 lg:items-start"
         >
           <div className="relative flex h-[50px] w-full max-w-[90vw] items-center justify-center overflow-hidden sm:h-[70px] md:h-[90px] lg:h-[140px] lg:justify-start xl:h-[180px]">
             <TextPressure
@@ -227,6 +227,22 @@ export function MinimalistHero({
               strokeColor="#ff0000"
               minFontSize={40}
             />
+          </div>
+
+          {/* STATS COMPONENT */}
+          <div className="mt-4 lg:mt-0 flex w-full max-w-[340px] sm:max-w-[420px] rounded-2xl border border-white/10 bg-white/5 p-4 sm:p-5 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] backdrop-blur-md">
+            <div className="flex flex-1 flex-col items-center justify-center border-r border-white/10">
+              <span className="text-3xl sm:text-4xl font-bold text-white tracking-tight">2+</span>
+              <span className="mt-1 sm:mt-2 text-[10px] tracking-[0.2em] text-white/50 uppercase font-medium">Startups</span>
+            </div>
+            <div className="flex flex-1 flex-col items-center justify-center border-r border-white/10">
+              <span className="text-3xl sm:text-4xl font-bold text-white tracking-tight">1.5+</span>
+              <span className="mt-1 sm:mt-2 text-[10px] tracking-[0.2em] text-white/50 uppercase font-medium">Years</span>
+            </div>
+            <div className="flex flex-1 flex-col items-center justify-center">
+              <span className="text-3xl sm:text-4xl font-bold text-white tracking-tight">12+</span>
+              <span className="mt-1 sm:mt-2 text-[10px] tracking-[0.2em] text-white/50 uppercase font-medium">Projects</span>
+            </div>
           </div>
         </motion.div>
       </div>
