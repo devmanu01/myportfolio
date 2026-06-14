@@ -3,7 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Code, Server, Smartphone, Globe, Palette, Database } from "lucide-react";
-import { cn } from "@/lib/utils";
+
 
 const skills = [
     { name: "Frontend", icon: Globe, items: ["React", "Next.js", "TypeScript", "Tailwind"] },
