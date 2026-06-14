@@ -16,7 +16,7 @@ const skills = [
 
 export const SkillsSection = ({ id = "skills" }: { id?: string }) => {
     return (
-        <section id={id} className="py-16 sm:py-20 md:py-24 bg-background overflow-hidden">
+        <section id={id} className="py-16 sm:py-20 md:py-24 bg-[#000000] overflow-hidden">
             <div className="container mx-auto px-4 sm:px-6">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}

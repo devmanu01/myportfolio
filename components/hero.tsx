@@ -4,12 +4,10 @@ import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Mail,
-  Instagram,
-  Twitter,
-  Linkedin,
   Menu,
   X
 } from "lucide-react";
+import { FaInstagram as Instagram, FaTwitter as Twitter, FaLinkedin as Linkedin } from "react-icons/fa";
 import TextPressure from "@/components/text-pressure";
 import { cn } from "@/lib/utils";
 
@@ -187,7 +185,7 @@ export function MinimalistHero({
 
         {/* CENTER IMAGE */}
         <div className="relative order-1 flex w-full items-center justify-center py-2 sm:py-6 lg:order-2 lg:py-0">
-          <div className="relative flex items-center justify-center overflow-hidden max-h-[380px] sm:max-h-[420px] md:max-h-[460px] lg:max-h-none mx-auto">
+          <div className="relative flex items-center justify-center overflow-hidden lg:overflow-visible max-h-[380px] sm:max-h-[420px] md:max-h-[460px] lg:max-h-none mx-auto">
             {/* Accent glows */}
             <motion.div
               initial={{ scale: 0.8, opacity: 0 }}
@@ -206,7 +204,7 @@ export function MinimalistHero({
             <motion.img
               src={imageSrc}
               alt={imageAlt}
-              className="relative z-10 w-48 object-cover block mx-auto sm:w-52 md:w-56 lg:w-56 lg:scale-125 xl:w-64 drop-shadow-2xl"
+              className="relative z-10 h-auto w-48 object-cover block mx-auto sm:w-52 md:w-56 lg:w-72 lg:scale-150 drop-shadow-2xl"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1 }}

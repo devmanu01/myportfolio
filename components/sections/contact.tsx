@@ -6,7 +6,7 @@ import { MapPin, Mail, Phone, ArrowUpRight } from "lucide-react";
 
 export const ContactSection = ({ id = "contact" }: { id?: string }) => {
     return (
-        <section id={id} className="py-16 sm:py-20 md:py-24 bg-background">
+        <section id={id} className="py-16 sm:py-20 md:py-24 bg-[#000000]">
             <div className="container mx-auto px-4 sm:px-6">
                 <div className="max-w-5xl mx-auto rounded-3xl bg-accent p-5 sm:p-8 md:p-16 text-black relative overflow-hidden">
                     <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl" />

@@ -22,7 +22,7 @@ export const AboutSection = ({
   className,
 }: AboutSectionProps) => {
   return (
-    <section id={id} className={cn("py-16 sm:py-20 md:py-24 lg:py-32 bg-background", className)}>
+    <section id={id} className={cn("py-16 sm:py-20 md:py-24 lg:py-32 bg-[#000000]", className)}>
       <div className="container mx-auto px-4 sm:px-6">
         <div className="grid items-center gap-12 lg:grid-cols-2">
           <motion.div
