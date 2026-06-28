@@ -240,7 +240,7 @@ export function MinimalistHero({
               <span className="mt-1 sm:mt-2 text-[10px] tracking-[0.2em] text-white/50 uppercase font-medium">Years</span>
             </div>
             <div className="flex flex-1 flex-col items-center justify-center">
-              <span className="text-3xl sm:text-4xl font-bold text-white tracking-tight">5+</span>
+              <span className="text-3xl sm:text-4xl font-bold text-white tracking-tight">8+</span>
               <span className="mt-1 sm:mt-2 text-[10px] tracking-[0.2em] text-white/50 uppercase font-medium">Projects</span>
             </div>
           </div>

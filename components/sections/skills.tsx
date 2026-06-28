@@ -25,7 +25,7 @@ const skillCategories = [
     ]
   },
   {
-    title: "BACKEND & BAAS",
+    title: "BACKEND",
     items: [
       { name: "Node.js", icon: SiNodedotjs, color: "text-[#339933]" },
       { name: "Express.js", icon: SiExpress, color: "text-white" },
@@ -70,21 +70,20 @@ export const SkillsSection = ({ id = "skills" }: { id?: string }) => {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-sm shadow-2xl overflow-hidden relative">
-          
+
           {/* Subtle grid accent background */}
           <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-transparent pointer-events-none" />
 
           {skillCategories.map((category, index) => (
-            <div 
+            <div
               key={category.title}
-              className={`p-6 sm:p-10 relative ${
-                index === 0 ? 'border-b md:border-r md:border-b border-white/10' : 
-                index === 1 ? 'border-b border-white/10' : 
-                index === 2 ? 'border-b md:border-b-0 md:border-r border-white/10' : 
-                ''
-              }`}
+              className={`p-6 sm:p-10 relative ${index === 0 ? 'border-b md:border-r md:border-b border-white/10' :
+                  index === 1 ? 'border-b border-white/10' :
+                    index === 2 ? 'border-b md:border-b-0 md:border-r border-white/10' :
+                      ''
+                }`}
             >
-              <h3 className="text-xs sm:text-sm font-bold tracking-widest text-white/70 uppercase mb-6 sm:mb-8">
+              <h3 className="text-xs sm:text-sm font-bold tracking-widest text-white/40 uppercase mb-6 sm:mb-8">
                 {category.title}
               </h3>
               <div className="flex flex-wrap gap-3 sm:gap-4">
@@ -95,10 +94,10 @@ export const SkillsSection = ({ id = "skills" }: { id?: string }) => {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.05 }}
-                    className="flex items-center gap-2 px-3 py-2 sm:px-4 sm:py-2.5 rounded-xl border border-white/20 bg-white/5 hover:bg-white/10 hover:border-white/30 transition-all duration-300 cursor-default group shadow-sm"
+                    className="flex items-center gap-2 px-3 py-2 sm:px-4 sm:py-2.5 rounded-xl border border-white/10 bg-black/40 hover:bg-white/10 hover:border-white/20 transition-all duration-300 cursor-default group"
                   >
-                    <item.icon className={`w-5 h-5 sm:w-5 sm:h-5 ${item.color} group-hover:scale-110 transition-transform`} />
-                    <span className="text-xs sm:text-sm font-medium text-white">{item.name}</span>
+                    <item.icon className={`w-4 h-4 sm:w-5 sm:h-5 ${item.color} group-hover:scale-110 transition-transform`} />
+                    <span className="text-xs sm:text-sm font-medium text-white/90">{item.name}</span>
                   </motion.div>
                 ))}
               </div>
